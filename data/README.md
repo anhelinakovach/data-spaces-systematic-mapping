@@ -19,8 +19,8 @@ This directory contains the dataset from our systematic mapping study on data sp
 - **Database** (string): Source database where paper was found (e.g., IEEE Xplore, Springer Link).
 
 ### Classification facets
-#### Building Blocks (DSSC Blueprint framework)
-Array of objects containing:
+#### Building Blocks & Novelty
+Based on the [Data Spaces Support Centre (DSSC) Blueprint v2.0 framework](https://dssc.eu/page/blueprint). It is an array of objects containing:
 - **Block** (string): Main category.
   - Data Interoperability
   - Data Sovereignty
@@ -29,7 +29,7 @@ Array of objects containing:
   - **Name**: Specific building block (see taxonomy below).
   - **Novelty**: Assessment of contribution novelty.
 
-**Building Blocks Taxonomy:**
+##### Building Blocks Taxonomy
 *Data Interoperability:*
 - Data Models
 - Data Exchange
@@ -42,14 +42,61 @@ Array of objects containing:
 
 *Data Value Creation Enablers:*
 - Data Offering
-- Data Discovery
+- Publication and Discovery
 - Value Creation Services
 
-#### Research Type (Maturity level)
+#### Research Type
 - Opinion, Experience, Conceptual, Solution, Validation, Evaluation.
 
-#### Sector classification
+#### Sector
 Object containing:
 - **Type** (string): Primary application domain.
   - Manufacturing, Healthcare, Energy, Transportation, Agriculture, Tourism, Generic, etc.
 - **Subdomain** (array): Specific application areas within the domain.
+
+### Additional Fields
+
+#### Architecture Types
+Array of strings representing the underlying reference architecture:
+- IDSA, Gaia-X, FIWARE, NA.
+
+#### Technologies
+Array of emerging/supporting technologies, such as:
+- Digital Twins (DT), Distributed Ledger Technology (DLT), Privacy Enhancing Technologies (PETs), AI/ML, etc.
+
+#### Process
+Methodology or process contribution, following the processes defined in the [International Data Spaces (IDS) Reference Architecture Model (RAM) v4.0](https://github.com/International-Data-Spaces-Association/IDS-RAM_4_0). 
+
+#### Challenges
+An array of identified challenges and limitations.
+
+#### Project Context
+Associated research project or initiative.
+
+#### Connector Types
+An array of the data space connector used in the study.
+- Data Space Connector (DSC), Eclipse Dataspace Components (EDC) Connector, Trusted Connector, TRUE Connector, NA.
+
+#### Comments
+Additional notes and observations.
+
+#### Description
+Summary of study contribution and focus.
+
+## Coding Conventions
+
+### Missing or Not Applicable Data
+- **"NA"**: Used when information is not applicable or not specified.
+- **Empty arrays []**: Used for multi-value fields with no applicable values.
+- **null**: Used for optional single values that are missing.
+
+### Author Information
+Each author object contains:
+- **Name**: Full author name.
+- **Affiliation**: Institution affiliation.
+- **Country**: Author's country.
+
+### Venue Information
+Site object contains:
+- **Name**: Conference/journal acronym or short name.
+- **Details**: Full conference/journal name and additional details.
